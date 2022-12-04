@@ -1,0 +1,36 @@
+<body>
+    <nav class="navbar py-4 navbar-expand-lg navnar-dark bg-primary">
+      <div class="container">
+        <div class="right">
+          <h3>Users Dashboard</h3>
+        </div>
+       </div>
+    </nav>
+    <div class="container my-3">
+      <div class="col">
+        <h1 class="mb-3">Users Info</h1>
+      </div>
+      <table class="table mt-2">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Avatar</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mat-row :hover" *ngFor="let info of users.data">
+            <td >{{info.id}}</td>
+            <td>{{info.email}}</td>
+            <td>{{info.first_name}}</td>
+            <td>{{info.last_name}}</td>
+            <td><img class="img-fluid img-responsive rounded product-image" src={{info.avatar}}> </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</body>
